@@ -64,8 +64,12 @@ export const ProfileUpdate: React.FC<profileUpdateProps> = memo(
 		}
 
 		const handlerChangeFile = async (e: any, setState: Function) => {
-			const url = await Api().different.upload(loadFile(e.target.files[0]))
-			setState(url)
+			try {
+				const url = await Api().different.upload(loadFile(e.target.files[0]))
+				setState(url)
+			} catch (err: any) {
+				alert(err.response.data.message)
+			}
 		}
 
 		return (
@@ -78,7 +82,7 @@ export const ProfileUpdate: React.FC<profileUpdateProps> = memo(
 							{patchHatImage && (
 								<img
 									className={style.update__top_image_file_image}
-									src={`http://localhost:4444${patchHatImage}`}
+									src={`${process.env.REACT_APP_API_URL}${patchHatImage}`}
 								/>
 							)}
 							<div className={style.update__top_image_file}>
@@ -97,7 +101,7 @@ export const ProfileUpdate: React.FC<profileUpdateProps> = memo(
 					<div className={style.update__main}>
 						<div className={style.update__main_image}>
 							<img
-								src={`http://localhost:4444${
+								src={`${process.env.REACT_APP_API_URL}${
 									patchAvatarUrl ? patchAvatarUrl : patchObj.avatarUrl
 								}`}
 								alt=''

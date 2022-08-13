@@ -64,7 +64,10 @@ export const NewComm: React.FC<NewCommProps> = ({ id, createNewComm }) => {
 		<div className={style.new}>
 			<form className={style.new__form} onSubmit={handleSubmit(onSubmit)}>
 				<div className={style.new__form_image}>
-					<img src={`http://localhost:4444${data?.avatarUrl}`} alt='' />
+					<img
+						src={`${process.env.REACT_APP_API_URL}${data?.avatarUrl}`}
+						alt=''
+					/>
 				</div>
 				<textarea
 					className={style.new__form_textarea}
@@ -88,7 +91,7 @@ export const NewComm: React.FC<NewCommProps> = ({ id, createNewComm }) => {
 			}
 			{imageUrl && (
 				<img
-					src={`http://localhost:4444${imageUrl}`}
+					src={`${process.env.REACT_APP_API_URL}${imageUrl}`}
 					width={150}
 					height={100}
 					alt=''

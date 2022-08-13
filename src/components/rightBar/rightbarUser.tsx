@@ -40,7 +40,7 @@ export const RightBarUser: React.FC<IUser> = ({
 					className={style.user__item_info_image}
 					onClick={() => console.log(followStatus)}
 				>
-					<img src={`http://localhost:4444${avatarUrl}`} alt='' />
+					<img src={`${process.env.REACT_APP_API_URL}${avatarUrl}`} alt='' />
 				</div>
 				<div className={style.user__item_info_text}>
 					<Link to={`/profile/${_id}`}>

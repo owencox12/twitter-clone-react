@@ -33,7 +33,10 @@ function App() {
 			dispatch(setPostsStatus(true))
 		} catch (err: any) {
 			alert(err.response.data.message)
-			Cookies.remove('token', { path: '/', domain: 'localhost' })
+			Cookies.remove('token', {
+				path: '/',
+				// domain: 'owencoxtwitter-clone.herokuapp.com',
+			})
 			document.location.reload()
 		}
 	}

@@ -19,7 +19,11 @@ export const FullImage: React.FC<fullImageProps> = ({
 	return (
 		<div className={style.full}>
 			<div className={style.full__image}>
-				<img src={`http://localhost:4444${imageUrl}`} alt='' ref={ref} />
+				<img
+					src={`${process.env.REACT_APP_API_URL}${imageUrl}`}
+					alt=''
+					ref={ref}
+				/>
 				<div
 					className={style.full__close}
 					onClick={() => setShowFullImage(false)}

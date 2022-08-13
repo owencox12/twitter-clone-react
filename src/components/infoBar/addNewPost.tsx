@@ -76,7 +76,10 @@ export const AddNewPost: React.FC = memo(() => {
 		<form className={style.infobar__form} onSubmit={handleSubmit(onSubmit)}>
 			<div className={style.infobar__form_info}>
 				<div className={style.infobar__form_info_image}>
-					<img src={`http://localhost:4444${data?.avatarUrl}`} alt='' />
+					<img
+						src={`${process.env.REACT_APP_API_URL}${data?.avatarUrl}`}
+						alt=''
+					/>
 				</div>
 				<textarea
 					className={style.infobar__form_textarea}
@@ -97,7 +100,7 @@ export const AddNewPost: React.FC = memo(() => {
 			</div>
 			{imageUrl ? (
 				<img
-					src={`http://localhost:4444${imageUrl}`}
+					src={`${process.env.REACT_APP_API_URL}${imageUrl}`}
 					className={style.infobar__form_image}
 					alt='image'
 				/>

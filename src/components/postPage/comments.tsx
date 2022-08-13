@@ -20,7 +20,10 @@ export const Comments: React.FC<IComments> = memo(
 					<div className={style.comments__block}>
 						<div className={style.comments__block_user}>
 							<div className={style.comments__block_user_image}>
-								<img src={`http://localhost:4444${user.avatarUrl}`} alt='' />
+								<img
+									src={`${process.env.REACT_APP_API_URL}${user.avatarUrl}`}
+									alt=''
+								/>
 							</div>
 							<div className={style.comments__block_user_info}>
 								<div className={style.comments__block_user_info_name}>
@@ -41,7 +44,10 @@ export const Comments: React.FC<IComments> = memo(
 							<div className={style.comments__block_text_comm}>{text}</div>
 							<div className={style.comments__block_text_image}>
 								{imageUrl && (
-									<img src={`http://localhost:4444${imageUrl}`} alt='' />
+									<img
+										src={`${process.env.REACT_APP_API_URL}${imageUrl}`}
+										alt=''
+									/>
 								)}
 							</div>
 						</div>

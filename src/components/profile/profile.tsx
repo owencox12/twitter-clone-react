@@ -153,7 +153,7 @@ export const Profile: React.FC = memo(() => {
 					</div>
 					<div className={style.profile__image}>
 						<img
-							src={`http://localhost:4444${user?.hatImage}`}
+							src={`${process.env.REACT_APP_API_URL}${user?.hatImage}`}
 							alt=''
 							onClick={() => getFullImage(user?.hatImage!)}
 						/>
@@ -161,7 +161,7 @@ export const Profile: React.FC = memo(() => {
 					<div className={style.profile__user}>
 						<div className={style.profile__user_image}>
 							<img
-								src={`http://localhost:4444${user?.avatarUrl}`}
+								src={`${process.env.REACT_APP_API_URL}${user?.avatarUrl}`}
 								alt=''
 								onClick={() => getFullImage(user?.avatarUrl!)}
 							/>

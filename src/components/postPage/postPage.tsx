@@ -54,6 +54,7 @@ export const PostPage: React.FC = () => {
 		temp.push(comm)
 		setCommentsItem(temp)
 	}
+
 	const handlerLike = async () => {
 		if (user) {
 			let temp = { ...user }
@@ -68,6 +69,7 @@ export const PostPage: React.FC = () => {
 				: await Api().likes.giveLike(id!)
 		}
 	}
+
 	const NewCommMemo = memo(NewComm)
 	return (
 		<div className={style.postpage}>
@@ -91,7 +93,7 @@ export const PostPage: React.FC = () => {
 					<div className={style.postpage__user}>
 						<div className={style.postpage__user_image}>
 							<img
-								src={`http://localhost:4444${user?.user.avatarUrl}`}
+								src={`${process.env.REACT_APP_API_URL}${user?.user.avatarUrl}`}
 								alt=''
 							/>
 						</div>

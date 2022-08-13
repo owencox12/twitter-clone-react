@@ -17,7 +17,7 @@ export const RightBarSearch: React.FC<IUser & righBarProps> = ({
 		<li className={style.rightbar__search_block_list_type}>
 			<div className={style.rightbar__search_block_list_type_image}>
 				<img
-					src={`http://localhost:4444${avatarUrl}`}
+					src={`${process.env.REACT_APP_API_URL}${avatarUrl}`}
 					width={60}
 					height={60}
 					alt=''

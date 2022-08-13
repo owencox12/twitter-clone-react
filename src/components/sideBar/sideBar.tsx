@@ -33,7 +33,10 @@ export const SideBar: React.FC = () => {
 	const [showPopup, setShowPopup] = useState<boolean>(false)
 	const logOuts = () => {
 		dispatch(logOut())
-		Cookies.remove('token', { path: '/', domain: 'localhost' })
+		Cookies.remove('token', {
+			path: '/',
+			// domain: 'owencoxtwitter-clone.herokuapp.com',
+		})
 		navigate('/')
 		dispatch(clearPosts())
 		dispatch(clearRightBar())
@@ -60,7 +63,10 @@ export const SideBar: React.FC = () => {
 				<div className={style.sidebar__profile}>
 					<div className={style.sidebar__profile_info}>
 						<div className={style.sidebar__profile_info_image}>
-							<img src={`http://localhost:4444${data?.avatarUrl}`} alt='' />
+							<img
+								src={`${process.env.REACT_APP_API_URL}${data?.avatarUrl}`}
+								alt=''
+							/>
 						</div>
 						<div className={style.sidebar__profile_info_text}>
 							<div className={style.sidebar__profile_info_text_name}>
@@ -81,7 +87,10 @@ export const SideBar: React.FC = () => {
 				>
 					<div className={style.sidebar__profile_block_top}>
 						<div className={style.sidebar__profile_block_top_image}>
-							<img src={`http://localhost:4444${data?.avatarUrl}`} alt='' />
+							<img
+								src={`${process.env.REACT_APP_API_URL}${data?.avatarUrl}`}
+								alt=''
+							/>
 						</div>
 						<div className={style.sidebar__profile_block_top_text}>
 							<div className={style.sidebar__profile_block_top_text_name}>
@@ -97,7 +106,7 @@ export const SideBar: React.FC = () => {
 							className={style.sidebar__profile_block_list_type}
 							onClick={logOuts}
 						>
-							Выйти из учётной записи @owencox12
+							Выйти из учётной записи @{data?.userName}
 						</li>
 					</ul>
 				</div>

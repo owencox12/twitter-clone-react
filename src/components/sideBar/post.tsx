@@ -68,7 +68,10 @@ export const Post: React.FC<IPost> = memo(
 			<div className={style.post}>
 				<div className={style.post__block}>
 					<div className={style.post__block_image}>
-						<img src={`http://localhost:4444${user.avatarUrl}`} alt='' />
+						<img
+							src={`${process.env.REACT_APP_API_URL}${user.avatarUrl}`}
+							alt=''
+						/>
 					</div>
 					<div className={style.post__item}>
 						<Link to={`/profile/${user._id}`}>
@@ -105,7 +108,7 @@ export const Post: React.FC<IPost> = memo(
 				{imageUrl ? (
 					<div className={style.post__block_images_image}>
 						<img
-							src={`http://localhost:4444${imageUrl}`}
+							src={`${process.env.REACT_APP_API_URL}${imageUrl}`}
 							alt=''
 							onClick={() => getFullImage(imageUrl)}
 						/>
