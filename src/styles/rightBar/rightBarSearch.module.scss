@@ -1,0 +1,38 @@
+.rightbar__search_block_list {
+    &_type {
+        color: #fff;
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+
+        &:hover {
+            background: rgba(255, 255, 255, .15);
+            transition: all .3s;
+        }
+
+        &_image {
+            img {
+                width: 75px;
+                height: 75px;
+                border-radius: 100px;
+            }
+        }
+
+        &_info {
+            margin-left: 25px;
+
+            &_name {
+                a {
+                    color: #fff;
+                    font-weight: 700;
+                    text-decoration: none;
+                }
+            }
+
+            &_tag {
+                color: gray;
+                font-weight: 500;
+            }
+        }
+    }
+}

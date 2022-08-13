@@ -1,0 +1,110 @@
+.postpage {
+	margin: 0 auto;
+	width: 599px;
+	z-index: 1000;
+	border-left: 1px solid rgba(255, 255, 255, 0.3);
+	border-right: 1px solid rgba(255, 255, 255, 0.3);
+	min-height: 98vh;
+	padding: 0 10px;
+
+	&__top {
+		display: flex;
+		padding-top: 10px;
+		&_arrow {
+			color: #fff;
+			font-size: 25px;
+		}
+		&_info {
+			&_tweets {
+				color: #fff;
+				font-size: 20px;
+				margin-left: 10px;
+			}
+		}
+	}
+	&__user {
+		margin-top: 10px;
+		display: flex;
+		align-items: center;
+		&_text {
+			display: flex;
+			flex-direction: column;
+			margin-left: 10px;
+			&_name {
+				a {
+					font-size: 20px;
+					color: #fff;
+					text-decoration: none;
+				}
+			}
+			&_tag {
+				font-size: 16px;
+				color: gray;
+			}
+		}
+		&_image {
+			img {
+				width: 50px;
+				height: 50px;
+				border-radius: 100px;
+			}
+		}
+	}
+	&__text {
+		color: #fff;
+		width: 500px;
+		font-size: 24px;
+		margin-top: 10px;
+	}
+	&__tags {
+		display: flex;
+		margin-top: 5px;
+		&_tag {
+			color: rgb(29, 155, 240);
+			transition: all 0.3s;
+			cursor: pointer;
+			margin: 0 10px;
+			font-weight: 500;
+			font-size: 16px;
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+	}
+	&__info {
+		color: gray;
+		display: flex;
+		width: 160px;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 10px;
+		font-size: 18px;
+		&_tile {
+		}
+	}
+	&__likes {
+		border-top: 1px solid rgba(255, 255, 255, 0.3);
+		border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+		padding: 13px 0;
+		margin-top: 10px;
+		&_count {
+			color: gray;
+			padding-left: 10px;
+			span {
+				color: #fff;
+			}
+		}
+	}
+	&__icons {
+		border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+		// padding: 10px 5px;
+		margin-top: 10px;
+		display: flex;
+		justify-content: space-between;
+		&_icon {
+			color: gray;
+			font-size: 25px;
+			cursor: pointer;
+		}
+	}
+}

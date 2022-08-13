@@ -1,0 +1,70 @@
+.infobar {
+    &__form {
+        margin-top: 20px;
+        padding: 0 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, .3);
+        &_info {
+            display: flex;
+            &_image {
+                margin-right: 15px;
+                img {
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 100px;
+                }
+            }
+        }
+        
+        &_image {
+            width: 200px;
+            height: 100px
+        }
+
+        &_textarea {
+            width: 100%;
+            background: none;
+            border: none;
+            resize: none;
+            outline: none;
+            min-height: 100px;
+            color: #fff;
+            font-size: 20px;
+            max-height: 200px;
+            overflow: auto;
+
+            &:focus {
+                border-bottom: 1px solid rgba(255, 255, 255, .3);
+            }
+
+            &::placeholder {
+                color: gray;
+                font-size: 25px;
+            }
+        }
+
+        &_use {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 5px;
+
+            &_icons {
+                color: steelblue;
+                font-size: 20px;
+                cursor: pointer;
+            }
+
+            &_btn {
+                button {
+                    width: 100px;
+                    height: 40px;
+                    background: steelblue;
+                    border: none;
+                    border-radius: 20px;
+                    color: #fff;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}

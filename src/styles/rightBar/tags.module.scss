@@ -1,0 +1,44 @@
+.tags {
+	&__block {
+		&_item {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin: 10px 0;
+			&_info {
+				&_theme {
+					color: gray;
+					font-size: 14px;
+					font-weight: 500;
+					font-size: 15px;
+				}
+			}
+
+			&_tag {
+				margin-top: 3px;
+				a {
+					color: #fff;
+					font-weight: 700;
+					font-size: 14px;
+					text-decoration: none;
+				}
+			}
+
+			&_tagCount {
+				color: gray;
+				font-size: 14px;
+				font-weight: 700;
+				margin-top: 3px;
+				font-size: 15px;
+			}
+		}
+	}
+
+	&__item {
+		&_icon {
+			color: #fff;
+			font-size: 30px;
+			cursor: pointer;
+		}
+	}
+}

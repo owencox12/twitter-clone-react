@@ -1,0 +1,77 @@
+.comments {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+	border-top: 1px solid rgba(255, 255, 255, 0.3);
+	padding-bottom: 5px;
+	overflow: auto;
+
+	&:first-child {
+		border-top: 1px solid rgba(255, 255, 255, 0.3);
+	}
+
+	&__block {
+		padding-bottom: 5px;
+
+		&_user {
+			display: flex;
+			align-items: center;
+
+			&_image {
+				margin-top: 20px;
+
+				img {
+					width: 50px;
+					height: 50px;
+					border-radius: 100px;
+				}
+			}
+
+			&_info {
+				display: flex;
+				padding-top: 5px;
+				margin-left: 15px;
+
+				&_name {
+					a {
+						color: #fff;
+						text-decoration: none;
+					}
+				}
+
+				&_tag {
+					color: gray;
+					margin-left: 5px;
+				}
+
+				&_time {
+					color: gray;
+					margin-left: 10px;
+				}
+			}
+		}
+
+		&_text {
+			&_to {
+				color: rgb(76, 147, 206);
+				margin-left: 65px;
+			}
+
+			&_image {
+				margin-left: 10px;
+				margin-top: 20px;
+
+				img {
+					width: 150px;
+					height: 100px;
+				}
+			}
+
+			&_comm {
+				color: #fff;
+				margin-top: 10px;
+				width: 530px;
+				margin-left: 10px;
+				font-size: 18px;
+			}
+		}
+	}
+}

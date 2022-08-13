@@ -1,0 +1,144 @@
+.sidebar {
+	position: fixed;
+	width: 30%;
+	height: 100%;
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+	}
+
+	&__logo {
+		font-size: 40px;
+		color: gray;
+		padding-top: 10px;
+	}
+
+	&__btn {
+		margin-top: 10px;
+
+		button {
+			width: 200px;
+			height: 44px;
+			background: steelblue;
+			border: none;
+			border-radius: 20px;
+			font-size: 17px;
+			color: #fff;
+			font-weight: 700;
+		}
+	}
+
+	&__list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		&_type {
+			margin: 25px 0;
+			display: flex;
+			align-items: center;
+
+			a {
+				span {
+					color: #fff;
+					margin-right: 10px;
+					font-size: 20px;
+				}
+
+				color: #fff;
+				text-decoration: none;
+				font-size: 25px;
+			}
+		}
+	}
+
+	&__profile {
+		position: absolute;
+		bottom: 2%;
+		display: flex;
+		align-items: center;
+		&_info {
+			display: flex;
+			align-items: center;
+			&_image {
+				img {
+					width: 50px;
+					height: 50px;
+					border-radius: 50px;
+				}
+			}
+			&_text {
+				margin-left: 10px;
+				&_name {
+					color: #fff;
+				}
+				&_id {
+					color: #fff;
+				}
+			}
+		}
+		&_dots {
+			color: #fff;
+			margin-left: 30px;
+			font-size: 25px;
+			cursor: pointer;
+		}
+	}
+	&__profile_blockTop {
+		position: absolute;
+		bottom: 10%;
+		left: -5%;
+		width: 250px;
+		min-height: 200px;
+		background: #000;
+		box-shadow: 0px 1px 8px 0px rgba(255, 255, 255, 0.5);
+		position: absolute;
+		max-height: 200px;
+		overflow: auto;
+		cursor: pointer;
+	}
+	&__profile_block {
+		&_top {
+			display: flex;
+			padding-top: 20px;
+			align-items: center;
+			border-bottom: 0.8px solid gray;
+			padding-bottom: 7px;
+			&_image {
+				padding-left: 10px;
+				img {
+					width: 50px;
+					height: 50px;
+					border-radius: 100px;
+				}
+			}
+			&_text {
+				margin-left: 15px;
+				&_name {
+					color: #fff;
+				}
+				&_tag {
+					color: gray;
+					font-size: 13px;
+					margin-top: 5px;
+				}
+			}
+		}
+		&_list {
+			margin-top: 10px;
+			&_type {
+				color: rgba(255, 255, 255, 0.95);
+				text-shadow: 0.2px 0.2px rgba(255, 255, 255, 0.5);
+				padding-left: 10px;
+				padding-top: 10px;
+				padding-bottom: 13px;
+				cursor: pointer;
+				width: 95%;
+				&:hover {
+					background: rgba(255, 255, 255, 0.1);
+				}
+			}
+		}
+	}
+}

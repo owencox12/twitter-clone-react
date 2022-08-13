@@ -1,0 +1,79 @@
+.not {
+    &__wrapper {
+        display: flex;
+    }
+
+    &__item {
+        &_image {
+            img {
+                width: 87%;
+                height: 880px;
+            }
+        }
+
+        &_logo {
+            color: #fff;
+            font-size: 50px;
+            padding-top: 150px;
+        }
+
+        &_title {
+            color: #fff;
+            font-weight: 700;
+            font-size: 60px;
+            width: 300px;
+            margin-top: 50px;
+        }
+
+        &_join {
+            font-size: 30px;
+            font-weight: 600;
+            color: #fff;
+            margin-top: 40px;
+            width: 600px;
+        }
+
+        &_btns {
+            display: flex;
+            margin-top: 50px;
+            &_btn {
+                &_auth {
+                    margin-left: 10px;
+                    button {
+                        width: 270px;
+                        height: 40px;
+                        border: .7px solid gray;
+                        color: #fff;
+                        font-size: 24px;
+                        background: none;
+                        border-radius: 20px;
+                    }
+                }
+                &_title {
+                    color: #fff;
+                    font-size: 25px;
+                    margin: 10px 0;
+                }
+                &_register {
+                    button {
+                        width: 270px;
+                        height: 40px;
+                        background: steelblue;
+                        color: #fff;
+                        font-size: 20px;
+                        border-radius: 20px;
+                    }
+                }
+            }
+        }
+    }
+    &__footer {
+        &_text {
+            font-size: 20px;
+            color: #fff;
+            text-align: center;
+            padding-top: 15px;
+            margin: 0 auto;
+        }
+    }
+}

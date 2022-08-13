@@ -1,0 +1,51 @@
+.new {
+    padding-bottom: 10px;
+    &__form {
+        display: flex;
+        align-items: center;
+        &_btn {
+            width: 120px;
+            height: 35px;
+            background: steelblue;
+            border-radius: 10px;
+            border: none;
+            color: #fff;
+            font-weight: 600;
+            font-size: 15px;
+        }
+        &_image {
+            img {
+                width: 50px;
+                height: 50px;
+                border-radius: 100px;
+            }
+        }
+        &_textarea {
+            width: 100%;
+            background: none;
+            border: none;
+            resize: none;
+            outline: none;
+            min-height: 100px;
+            color: #fff;
+            font-size: 20px;
+            max-height: 200px;
+            overflow: auto;
+            padding-top: 10px;
+            padding-left: 10px;
+        }
+    }
+    &__file {
+        input {
+            display: none;
+        }
+        label {
+            color: steelblue;
+            font-size: 25px;
+        }
+        img {
+            width: 150px;
+            height: 100px;
+        }
+    }
+}
