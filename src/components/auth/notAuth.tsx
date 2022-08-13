@@ -36,7 +36,7 @@ export const NotAuth: React.FC = () => {
 			<div className={style.not__wrapper}>
 				<div className={style.not__item}>
 					<div className={style.not__item_image}>
-						<img src='./twitterAuth.jpg' alt='' />
+						<img src='./twitterAuth.png' alt='' />
 					</div>
 				</div>
 				<div className={style.not__item}>
